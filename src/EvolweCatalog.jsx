@@ -1,9 +1,14 @@
-
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Card, CardContent } from "../components/ui/card";
-import { ChevronDown, ChevronUp } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+import Button from "../components/ui/button";
+// import { Input } from "@/components/ui/input";
+import Input from "../components/ui/input";
+// import { Card, CardContent } from "@/components/ui/card";
+import Card from "../components/ui/card";
+import CardContent from "../components/ui/card-content";
+// Removed lucide-react icons. You can replace with text or SVG if needed.
+const ChevronDown = () => <span>▼</span>;
+const ChevronUp = () => <span>▲</span>;
 const whatsappLogo = "/whatsapp-icon.png";
 
 const products = [
@@ -113,8 +118,8 @@ export default function EvolweCatalog() {
       {cart.length > 0 && (
         <div className="mt-10 p-4 border-t">
           <div className="flex justify-center mb-4">
-            <img src="/cart-icon.png" alt="Cart Icon" className="w-8 h-8" />
-          </div>
+  <img src="/cart-icon.png" alt="Cart Icon" className="w-8 h-8" />
+</div>
           <ul className="mb-4">
             {cart.map((item, index) => (
               <li key={index}>
@@ -123,13 +128,13 @@ export default function EvolweCatalog() {
             ))}
           </ul>
           <div className="flex justify-center">
-            <Button
-              className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
-              onClick={handleCheckout}
-            >
-              <img src={whatsappLogo} alt="WhatsApp" className="w-5 h-5" /> Buy via WhatsApp
-            </Button>
-          </div>
+  <Button
+    className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
+    onClick={handleCheckout}
+  >
+    <img src={whatsappLogo} alt="WhatsApp" className="w-5 h-5" /> Buy via WhatsApp
+  </Button>
+</div>
         </div>
       )}
 
@@ -150,13 +155,13 @@ export default function EvolweCatalog() {
       <div className="mt-10 mb-6">
         <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
         <div className="flex justify-center">
-          <Button
-            className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
-            onClick={() => window.open("https://wa.me/6592419525", "_blank")}
-          >
-            <img src={whatsappLogo} alt="WhatsApp" className="w-5 h-5" /> Chat on WhatsApp
-          </Button>
-        </div>
+  <Button
+    className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
+    onClick={() => window.open("https://wa.me/6592419525", "_blank")}
+  >
+    <img src={whatsappLogo} alt="WhatsApp" className="w-5 h-5" /> Chat on WhatsApp
+  </Button>
+</div>
       </div>
     </div>
   );
