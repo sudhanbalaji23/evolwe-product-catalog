@@ -1,8 +1,8 @@
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Card, CardContent } from "../components/ui/card";
 import { ChevronDown, ChevronUp } from "lucide-react";
 const whatsappLogo = "/whatsapp-icon.png";
 
